@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Record A Video! Push button to start.\n"/>
+        android:text="Push Button to Start Recording"/>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -20,7 +20,30 @@
 
     <VideoView
         android:id="@+id/vv_main"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="400dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@android:drawable/ic_media_play"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="playVideo"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_media_pause"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="pauseVideo"/>
+
+    </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
